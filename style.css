@@ -108,41 +108,10 @@ body{
 
 .login button:hover {
     background-color: rgb(0, 187, 255);
-    transform: scale(1.1);
 }
 
 
 @media screen and (max-width: 910px) {
-
-
-    .nav-elements li a{
-        display: grid;
-    }
-
-    .navbar .logo img{
-        width: 60px;
-    }
-
-    .downArrow {
-        display: block; /* Show hamburger button */
-        position: relative;
-        right: 30%;
-        
-    }
-
-    /* menu text */
-    .downArrow .text{
-        font-family: cursive;
-    }
-
-    .downArrow i{
-        font-size: 18px;
-        color: rgb(0, 248, 173);
-        font-size:medium;
-    
-    }
-    
-
     .nav-elements {
         display: none; /* Hide nav by default */
         position: absolute;
@@ -150,22 +119,61 @@ body{
         left: 0;
         width: 100%;
         background-color: #1e1e1e;
-        text-align: center;
+        text-align: left; /* Align menu items to the left */
         flex-direction: column;
+        padding: 0;
+         border: 2px solid white; /*Border around menu */
     }
 
     .nav-elements ul {
         flex-direction: column;
-        gap: 1rem;
-        padding: 1rem 0;
+        gap: 0; /* Remove unnecessary spacing */
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .nav-elements li {
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid white;  /* Border for each item */
+    }
+
+    .nav-elements li a {
+        display: block;
+        padding: 10px 15px; /* Spacing for better click area */
+        color: white;
+        text-decoration: none;
+    }
+
+    .nav-elements li a:hover {
+        background-color: red; /* Better hover effect */
     }
 
     .nav-elements.active {
-        display: flex; /* Show nav when active */
+        display: flex;
+    }
+
+
+
+    /*Fix menu button position */
+    .downArrow {
+        display: block;
+        position: relative;
+        left: 20px; /* Push it left */
+    }
+
+    .downArrow .text{
+        position: relative;
+        right: 190px;
+    }
+
+    .downArrow i {
+        font-size: 18px;
+        color: rgb(0, 248, 173);
+        font-size: medium;
     }
 }
-
-
 
 
 /* ------------------main------------------------- */

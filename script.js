@@ -1,8 +1,11 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const downArrow = document.querySelector(".downArrow");
-    const navElements = document.querySelector(".nav-elements");
+document.addEventListener("DOMContentLoaded", function () {
+    const menuBtn = document.querySelector(".downArrow");
+    const menuItems = document.querySelector(".nav-elements");
+    const arrowIcon = menuBtn.querySelector("i");
 
-    downArrow.addEventListener("click", function() {
-        navElements.classList.toggle("active");
+    menuBtn.addEventListener("click", function () {
+        menuItems.classList.toggle("active"); // Toggle menu visibility
+        arrowIcon.classList.toggle("fa-chevron-up"); // Change arrow to up
+        arrowIcon.classList.toggle("fa-chevron-down"); // Change arrow to down
     });
 });
