@@ -87,6 +87,10 @@ body{
     color: rgb(0, 187, 255);
 }
 
+.search-container{
+    display: none;
+}
+
 .login{
     width: 100px;
     display: flex;
@@ -104,6 +108,8 @@ body{
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
+    position: relative;
+    left: 20px;
 }
 
 .login button:hover {
@@ -111,7 +117,15 @@ body{
 }
 
 
+
+
 @media screen and (max-width: 910px) {
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
     .nav-elements {
         display: none; /* Hide nav by default */
         position: absolute;
@@ -123,6 +137,12 @@ body{
         flex-direction: column;
         padding: 0;
          border: 2px solid white; /*Border around menu */
+    }
+
+    .navbar .logo img{
+        width: 50px;
+        position: relative;
+        right: 10px;
     }
 
     .nav-elements ul {
@@ -160,7 +180,7 @@ body{
     .downArrow {
         display: block;
         position: relative;
-        left: 20px; /* Push it left */
+        left: 190px; /*Push it left */
     }
 
     .downArrow .text{
@@ -172,6 +192,23 @@ body{
         font-size: 18px;
         color: rgb(0, 248, 173);
         font-size: medium;
+    }
+
+    .search-container {
+        flex: 1; /* Takes available space */
+        display: flex;
+        justify-content: center;
+        margin-left: 10px; /* Add some space from the menu button */
+    }
+    
+    /* Search bar styling */
+    .search-bar {
+        width: 100%;
+        max-width: 300px; /* Adjust width */
+        padding: 0.4rem;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
     }
 }
 
