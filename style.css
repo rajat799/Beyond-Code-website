@@ -119,7 +119,7 @@ body{
 
 
 
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 915px) {
 
     .navbar {
         display: flex;
@@ -209,7 +209,14 @@ body{
         font-size: 16px;
         border: 1px solid #ccc;
         border-radius: 10px;
+       
+        background: url('images/search.png') no-repeat;
+        background-color: white;
+        background-position: right 10px center;
+        background-size: 16px; 
+        padding-right: 35px;
     }
+
 }
 
 
@@ -230,6 +237,8 @@ main section{
 
 .hero h1{
     color: white;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
 }
+
+
