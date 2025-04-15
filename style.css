@@ -135,7 +135,6 @@ a {
         display: none; /* Hide nav by default */
         position: absolute;
         top: 5rem;
-        left: 0;
         width: 100%;
         background-color: #1e1e1e;
         text-align: left; /* Align menu items to the left */
@@ -185,12 +184,12 @@ a {
     .downArrow {
         display: block;
         position: relative;
-        left: 190px; /*Push it left */
+        left: 10px; /*Push it right */
     }
 
     .downArrow .text{
         position: relative;
-        right: 190px;
+        /* right: 110px; */
     }
 
     .downArrow i {
