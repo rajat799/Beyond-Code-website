@@ -9,6 +9,7 @@ body{
     font-family:cursive;
     padding-top: 5rem;
     background-color: #0b0220;
+
 }
 
 .navbar{
@@ -41,7 +42,7 @@ body{
 
 
 
-.navbar .logo img{
+/* .navbar .logo img{
     width: 80px;
     position: relative;
     right: 10px;
@@ -58,13 +59,17 @@ body{
 
 .logo .logo2{
     color: rgb(0, 187, 255);
-}
+} */
 
-/* a {
-    background: linear-gradient(to right, rgb(255, 200, 0), rgb(0, 187, 255));
+a {
+    background: linear-gradient(to right, rgb(255, 200, 0), rgb(225, 255, 0));
     -webkit-background-clip: text;
     color: transparent;
-} */
+}   
+
+.logo a{
+    font-size: xx-large;
+}
 
 
 .nav-elements ul{
@@ -242,3 +247,57 @@ main section{
 }
 
 
+/* css for sign up */
+.form-container {
+    background: white;
+    padding: 2rem;
+    max-width: 500px;
+    margin: 80px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255,255,255,0.2);
+    text-align: center;
+  }
+  
+  .form-container h2 {
+    margin-bottom: 20px;
+    color: #0b0220;
+  }
+  
+  .form-container form input {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    margin: 1rem 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .form-container form button {
+    background-color: rgb(255, 200, 0);
+    color: black;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 20px;
+    font-weight: bold;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .form-container form button:hover {
+    background-color: rgb(0, 187, 255);
+  }
+
+  .form-container a{
+    text-decoration: none;
+    color: #ff0101;
+  }
+  
+  /* Signup page background styling */
+.signup-bg {
+    background: linear-gradient(300deg, #4a148c, #3807ac);
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
