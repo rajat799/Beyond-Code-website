@@ -9,3 +9,27 @@ document.addEventListener("DOMContentLoaded", function () {
         arrowIcon.classList.toggle("fa-chevron-down"); // Change arrow to down
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const text = "Code Beyond Your Limits";
+    const target = document.querySelector(".typing-text");
+    let i = 0;
+    const typing = () => {
+      if (i < text.length) {
+        target.textContent += text.charAt(i);
+        i++;
+        setTimeout(typing, 80);
+      }
+    };
+    typing();
+  });
+  
+
+// loader
+
+  // Wait for 2 seconds before hiding the loader
+    window.addEventListener("load", function () {
+    setTimeout(() => {
+      document.getElementById("preloader").style.display = "none";
+    }, 1000); // 2000ms = 2 seconds
+  });

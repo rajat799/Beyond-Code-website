@@ -9,6 +9,10 @@
     <title>Codora - Home</title>
 </head>
 <body>
+    <div id="preloader">
+      <div class="spinner"></div>
+    </div>
+  
     <header>
         <div class="navbar">
             <div class="logo">
@@ -20,12 +24,6 @@
             <button class="downArrow">
               <span class="text">menu  <i class="fa-solid fa-chevron-down"></i></span>
             </button> 
-
-            <div class="search-container">
-                <input type="text" class="search-bar" placeholder="Search....">
-            </div>
-
-
 
             <div class="nav-elements">
                 <ul>
@@ -39,6 +37,8 @@
                 </ul>
             </div>
 
+            
+
             <div class="login">
                 <a href="signup.html"><button>Sign up</button></a>
               </div>
@@ -47,11 +47,78 @@
     </header>
     
     <main>
-        <section class="hero"> 
-            <h1>Code Beyond your Limits</h1>
+        <section class="hero">
+          <div class="hero-content">
+            <h1><span class="typing-text"></span></h1>
+            <p>Learn. Practice. Build. Get Rewarded.</p>
+            <div class="hero-search">
+              <input type="text" placeholder="Search for courses, topics, or tutorials...">
+              <button><i class="fas fa-search"></i></button>
+            </div>
+          </div>
         </section>
-    </main>
 
+      <!-- Courses Section -->
+      <section class="courses">
+        <h2 class="section-heading">Our Courses</h2>
+        <div class="course-grid">
+
+          <div class="course-card">
+            <img src="images/html_img.png" alt="HTML Icon" class="course-icon" />
+            <h3>HTML Basics</h3>
+            <p>Learn how to structure web pages using HTML from scratch.</p>
+            <a href="#" class="start-btn"><i class="fas fa-play-circle"></i> Start Course</a>
+
+          </div>
+          
+          
+
+          <div class="course-card">
+            <img src="images/css_img.png" alt="HTML Icon" class="course-icon" />
+            <h3>CSS Fundamentals</h3>
+            <p>Design beautiful and responsive layouts with modern CSS.</p>
+            <a href="#" class="start-btn"><i class="fas fa-play-circle"></i> Start Course</a>
+
+          </div>
+
+          <div class="course-card">
+            <img src="images/javascript_img.png" alt="HTML Icon" class="course-icon" />
+
+            <h3>JavaScript Essentials</h3>
+            <p>Add interactivity and logic to your websites with JavaScript.</p>
+            <a href="#" class="start-btn"><i class="fas fa-play-circle"></i> Start Course</a>
+
+          </div>
+
+          <div class="course-card">
+            <img src="images/python_img.png" alt="HTML Icon" class="course-icon" />
+
+            <h3>Python for Beginners</h3>
+            <p>Understand Python fundamentals and start building simple apps.</p>
+            <a href="#" class="start-btn"><i class="fas fa-play-circle"></i> Start Course</a>
+          </div>
+
+          <div class="course-card">
+            <img src="images/c_img.png" alt="HTML Icon" class="course-icon" />
+
+            <h3>C Programming</h3>
+            <p>Learn basic fundamentals and programming using C.</p>
+            <a href="#" class="start-btn"><i class="fas fa-play-circle"></i> Start Course</a>
+          </div>
+
+          <div class="course-card">
+            <img src="images/cpp_img.png" alt="HTML Icon" class="course-icon" />
+
+            <h3>C++ and OOP</h3>
+            <p>Understand C++ with Object oriented concepts</p>
+            <a href="#" class="start-btn"><i class="fas fa-play-circle"></i> Start Course</a>
+          </div>  
+
+        </div>
+      </section>
+
+      </main>
+      
     <script src="script.js"></script>
 </body>
 </html>

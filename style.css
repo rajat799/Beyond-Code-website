@@ -1,312 +1,347 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* outline: 1px solid red; */
+/* Reset and Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    font-family:cursive;
-    padding-top: 5rem;
-    background-color: #0b0220;
-
+body {
+  font-family: cursive;
+  padding-top: 5rem;
+  background-color: #0b0220;
 }
 
-.navbar{
-    background-color: #1e1e1e;
-    width: 100%;
-    height: 5rem;
-    display: flex;
-    top: 0;
-    left: 0;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem 1rem;
-    position: fixed;
-    top: 0;
-    flex-wrap: wrap;
-    flex-direction: row;
+/* Navbar */
+.navbar {
+  background-color: #1e1e1e;
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
 
-    /* z-index: 1000; */
+.logo a {
+  font-size: xx-large;
+  background: linear-gradient(to right, rgb(255, 200, 0), rgb(225, 255, 0));
+  -webkit-background-clip: text;
+  color: transparent;
+  text-decoration: none;
+}
 
+.nav-elements ul {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+}
+
+.nav-elements li a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-elements li a:hover {
+  color: rgb(0, 187, 255);
 }
 
 .downArrow {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1rem;
-    color: white;
-    cursor: pointer;
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
 
 
 
-/* .navbar .logo img{
-    width: 80px;
-    position: relative;
-    right: 10px;
-}
-
-
-.navbar .logo a{
-    text-decoration: none;
-}
-
-.logo .logo1{
-    color: rgb(255, 200, 0);
-}
-
-.logo .logo2{
-    color: rgb(0, 187, 255);
-} */
-
-a {
-    background: linear-gradient(to right, rgb(255, 200, 0), rgb(225, 255, 0));
-    -webkit-background-clip: text;
-    color: transparent;
-}   
-
-.logo a{
-    font-size: xx-large;
-}
-
-
-.nav-elements ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 4rem;
-    list-style: none;
-    padding: 0;
-
-}
-
-.nav-elements li a{
-    text-decoration: none;
-    color: white;
-}
-
-.nav-elements li a:hover{
-    text-decoration: none;
-    color: rgb(0, 187, 255);
-}
-
-.search-container{
-    display: none;
-}
-
-.login{
-    width: 100px;
-    display: flex;
-    align-items:center;
-    justify-content: center;
-}
-
-.login button{
-    width: 80px;
-    height: 35px;
-    border-radius: 20px;
-    border: none;
-    background-color: rgb(255, 200, 0);
-    color: black;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-    position: relative;
-    left: 20px;
+/* Login Button */
+.login button {
+  background-color: rgb(255, 200, 0);
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .login button:hover {
-    background-color: rgb(0, 187, 255);
+  background-color: rgb(0, 187, 255);
+  color: white;
+}
+
+/*  */
+#preloader {
+  background-color: #0b0220;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgb(255, 200, 0);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Hero Section */
+.hero {
+  background: url('images/image.png') no-repeat center center/cover;
+  position: relative;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  color: white;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: -1;
+}
+
+
+.typing-text {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  white-space: nowrap;
+  border-right: 2px solid rgb(255, 200, 0);
+  overflow: hidden;
+  width: 0;
+  animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.hero-search input {
+  padding: 10px;
+  border: none;
+  border-radius: 10px 0 0 10px;
+  width: 400px; /* Set fixed width */
+  max-width: 100%; /* Prevent overflow on small screens */
+  font-size: 1rem;
+  outline: none;
+}
+
+
+.hero-search button {
+  padding: 10px 20px;
+  background-color: rgb(255, 200, 0);
+  color: black;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.hero-search button:hover {
+  background-color: rgb(0, 187, 255);
+  color: white;
+}
+
+/* Courses Section */
+.courses {
+  padding: 4rem 2rem;
+  background-color: #0b0220;
+  color: white;
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 2.4rem;
+  color: #ffd700;
+  margin-bottom: 2rem;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.course-card {
+  background: #1e1e1e;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  text-align: center;
+  transform: translateY(0);
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Fade-in animation on load */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(255, 200, 0, 0.3);
+}
+
+.course-icon {
+  width: 250px;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover .course-icon {
+  transform: scale(1.1);
+}
+
+.course-card h3 {
+  font-size: 1.4rem;
+  color: #00bbff;
+  margin-bottom: 0.5rem;
+}
+
+.course-card p {
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.start-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 10px 20px;
+  background-color: rgb(255, 200, 0);
+  color: black;
+  font-weight: bold;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.start-btn i {
+  transition: transform 0.3s ease;
+}
+
+.start-btn:hover {
+  background-color: rgb(0, 187, 255);
+  color: white;
+  transform: scale(1.05);
+}
+
+.start-btn:hover i {
+  transform: translateX(4px);
+}
+
+
+body {
+  background: linear-gradient(-45deg, #4a148c, #3807ac, #0b0220, #240b36);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 
 
-
+/* Responsive Navigation */
 @media screen and (max-width: 915px) {
-
-    .navbar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .nav-elements {
-        display: none; /* Hide nav by default */
-        position: absolute;
-        top: 5rem;
-        width: 100%;
-        background-color: #1e1e1e;
-        text-align: left; /* Align menu items to the left */
-        flex-direction: column;
-        padding: 0;
-         border: 2px solid white; /*Border around menu */
-    }
-
-    .navbar .logo img{
-        width: 50px;
-        position: relative;
-        right: 10px;
-    }
-
-    .nav-elements ul {
-        flex-direction: column;
-        gap: 0; /* Remove unnecessary spacing */
-        padding: 0;
-        margin: 0;
-        width: 100%;
-    }
-
-    .nav-elements li {
-        width: 100%;
-        text-align: left;
-        border-bottom: 1px solid white;  /* Border for each item */
-    }
-
-    .nav-elements li a {
-        display: block;
-        padding: 10px 15px; /* Spacing for better click area */
-        color: white;
-        text-decoration: none;
-    }
-
-    .nav-elements li a:hover {
-        background-color: red; /* Better hover effect */
-    }
-
-    .nav-elements.active {
-        display: flex;
-    }
-
-
-
-    /*Fix menu button position */
-    .downArrow {
-        display: block;
-        position: relative;
-        left: 10px; /*Push it right */
-    }
-
-    .downArrow .text{
-        position: relative;
-        /* right: 110px; */
-    }
-
-    .downArrow i {
-        font-size: 18px;
-        color: rgb(0, 248, 173);
-        font-size: medium;
-    }
-
-    .search-container {
-        flex: 1; /* Takes available space */
-        display: flex;
-        justify-content: center;
-        margin-left: 10px; /* Add some space from the menu button */
-    }
-    
-    /* Search bar styling */
-    .search-bar {
-        width: 100%;
-        max-width: 300px; /* Adjust width */
-        padding: 0.4rem;
-        font-size: 16px;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-       
-        background: url('images/search.png') no-repeat;
-        background-color: white;
-        background-position: right 10px center;
-        background-size: 16px; 
-        padding-right: 35px;
-    }
-
-}
-
-
-/* ------------------main------------------------- */
-
-main{
-    height: 90vh;
-    background: linear-gradient(300deg, #4a148c, #3807ac);
-}
-
-main section{
-    height: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background: url("image.png"); */
-}
-
-.hero h1{
-    color: white;
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-
-/* css for sign up */
-.form-container {
-    background: white;
-    padding: 2rem;
-    max-width: 500px;
-    margin: 80px auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255,255,255,0.2);
-    text-align: center;
+  .nav-elements {
+    display: none;
+    position: absolute;
+    top: 5rem;
+    width: 100%;
+    background-color: #1e1e1e;
+    flex-direction: column;
+    text-align: left;
+    padding: 1rem;
+    border-top: 1px solid white;
   }
-  
-  .form-container h2 {
-    margin-bottom: 20px;
-    color: #0b0220;
+
+  .nav-elements ul {
+    flex-direction: column;
+    gap: 1rem;
   }
-  
-  .form-container form input {
+
+  .downArrow {
     display: block;
-    width: 100%;
-    padding: 0.8rem;
-    margin: 1rem 0;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-  }
-  
-  .form-container form button {
-    background-color: rgb(255, 200, 0);
-    color: black;
-    border: none;
-    padding: 0.8rem;
-    border-radius: 20px;
-    font-weight: bold;
-    width: 100%;
-    cursor: pointer;
-  }
-  
-  .form-container form button:hover {
-    background-color: rgb(0, 187, 255);
+    color: white;
   }
 
-  .form-container a{
-    text-decoration: none;
-    color: #ff0101;
-  }
-  
-  /* Signup page background styling */
-.signup-bg {
-    background: linear-gradient(300deg, #4a148c, #3807ac);
-    min-height: 80vh;
+  .nav-elements.active {
     display: flex;
-    justify-content: center;
-    align-items: center;
   }
-
-/* Signup page background styling */
-.login-bg{
-    background: linear-gradient(300deg, #4a148c, #3807ac);
-    min-height: 100vh;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
 }
-  
-  
