@@ -1,3 +1,16 @@
+/* Reset and Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: cursive;
+  padding-top: 5rem;
+  background-color: #0b0220;
+}
+
 /* ------------------ Signup/Login Background ------------------ */
 .signup-bg, .login-bg {
     background: linear-gradient(300deg, #4a148c, #3807ac);
