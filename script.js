@@ -33,3 +33,14 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("preloader").style.display = "none";
     }, 1000); // 2000ms = 2 seconds
   });
+
+// Highlight current page's button
+document.addEventListener('DOMContentLoaded', function() {
+  const currentPage = window.location.pathname.split('/').pop();
+  
+  if(currentPage === 'login.html') {
+    document.querySelector('.login-btn').classList.add('active');
+  } else if(currentPage === 'signup.html') {
+    document.querySelector('.signup-btn').classList.add('active');
+  }
+});
